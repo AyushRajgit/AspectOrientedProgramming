@@ -13,5 +13,4 @@ public class globalPointCuts {
 
     @Pointcut("execution(* com.cper.AspectOrientedProgramming.controller.UserController.*(..))")
     public void userControllerPointCut() {}
-
 }
