@@ -13,4 +13,11 @@ public class globalPointCuts {
 
     @Pointcut("execution(* com.cper.AspectOrientedProgramming.controller.UserController.*(..))")
     public void userControllerPointCut() {}
+
+    @Pointcut("@annotation(com.cper.AspectOrientedProgramming.customAnnotation.AuditLog)")
+    public void mathodLevelAnnotationPointCut() {}
+
+    @Pointcut("@within(com.cper.AspectOrientedProgramming.customAnnotation.AuditLog)")
+    public void classLevelAnnotationPointCut() {}
+
 }

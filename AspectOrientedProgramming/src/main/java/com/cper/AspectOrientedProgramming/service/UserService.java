@@ -1,8 +1,10 @@
 package com.cper.AspectOrientedProgramming.service;
 
+import com.cper.AspectOrientedProgramming.customAnnotation.AuditLog;
 import org.springframework.stereotype.Service;
 
 @Service
+@AuditLog
 public class UserService {
 
     public String createUser() {
