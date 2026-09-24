@@ -16,9 +16,9 @@ public class dtoAuditLogAspect {
 
     @Before("com.cper.AspectOrientedProgramming.aspect.globalPointCuts.classLevelAnnotationPointCut()")
     public void beforeAuditLog(JoinPoint joinPoint) {
-        System.out.println("Class      : " + joinPoint.getTarget().getClass().getName());
-        System.out.println("Method     : " + joinPoint.getSignature().getName());
-        System.out.println("Arguments  : " + Arrays.stream(joinPoint.getArgs()).map(args -> args == null? null : (User)args).toList());
+        System.out.println("Class      :  " + joinPoint.getTarget().getClass().getName());
+        System.out.println("Method     :  " + joinPoint.getSignature().getName());
+        System.out.println("Arguments  :  " + Arrays.stream(joinPoint.getArgs()).map(args -> args == null? null : (User)args).toList());
     }
 
     @Around("com.cper.AspectOrientedProgramming.aspect.globalPointCuts.classLevelAnnotationPointCut()")
